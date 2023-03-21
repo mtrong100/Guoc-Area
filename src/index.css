@@ -1,0 +1,121 @@
+/* IMPORT GOGGLE FONT */
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* ============================================= */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply font-primary bg-bgColor text-white overflow-x-hidden;
+  }
+  .wrapper {
+    @apply max-w-[1170px] px-[15px] mx-auto;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-secondary;
+  }
+  .btn-border {
+    @apply px-6 py-3 md:px-8 md:py-3 border-2 hover:bg-primary transition-all duration-500 border-solid text-white border-primary font-medium rounded-md;
+  }
+  .btn-fill {
+    @apply px-6 py-[14px] md:px-8 md:py-[14px] bg-primary font-medium text-white rounded-md;
+  }
+  .btn-fill-2 {
+    @apply px-10 py-3 bg-bgColor text-white font-secondary;
+  }
+  .img-cover {
+    @apply w-full h-full object-cover rounded-md;
+  }
+  .border-cover {
+    @apply border-2 border-dashed border-primary;
+  }
+}
+
+:root {
+  --primarycolor: #ba9373;
+  --secondarycolor: #625b4b;
+}
+
+.feature-cover::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  border: 2px dashed var(--primarycolor);
+}
+
+.offer-cover::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  bottom: 8px;
+  left: 8px;
+  border: 2px dashed var(--primarycolor);
+}
+
+.arrow-down::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 30px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-top: 10px solid var(--secondarycolor);
+}
+
+/* ===========
+* LINKS HOVER 
+============== */
+.links::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 3px;
+  bottom: -3px;
+  right: 0;
+  transition: 0.5s linear;
+  left: 0;
+  background-color: var(--primarycolor);
+}
+.links:hover::before {
+  width: 100%;
+}
+
+/* ==================
+* CUSTOM HOVER BUTTON
+===================== */
+.btn-shinny {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.btn-shinny:hover::before {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.btn-shinny::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: auto;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #fff;
+  opacity: 0.1;
+  z-index: -1;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
