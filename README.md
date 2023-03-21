@@ -1,6 +1,7 @@
 # Guoc-Area
 # Create coffee website using React and Tailwind CSS (fully responsive)
 # Library using: AOS, Swiper JS
+# Link-web: https://mtrong100.github.io/Guoc-Area/
 
 ## Preview
 ![image](https://user-images.githubusercontent.com/94778246/226635351-1902f02d-781b-4a7e-ae91-ce56f9b723f3.png)
